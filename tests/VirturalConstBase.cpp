@@ -20,9 +20,7 @@ namespace virtual_base_const1 {
         };
     };
 
-}
 
-using namespace virtual_base_const1;
 
     TEST_CASE("VirtualConst1: Shape") {
         Shape shape;
@@ -53,3 +51,4 @@ using namespace virtual_base_const1;
         Shape *shape = &triangle;
         shape->printMe();
     }
+}
