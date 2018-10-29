@@ -3,49 +3,53 @@
 
 using namespace std;
 
-class VirtualBaseShape {
-public:
+namespace virtual_base {
 
-    virtual void printMe()  {
-        std::cout << "Hello, I'm a shape" ;
+
+    class Shape {
+    public:
+
+        virtual void printMe() {
+            std::cout << "Hello, I'm a shape";
+        };
     };
-};
 
-class VirtualBaseTriangle : public VirtualBaseShape {
-public:
+    class Triangle : public Shape {
+    public:
 
-    void printMe()  {
-        std::cout << "Hello, I'm a Triangle";
+        void printMe() {
+            std::cout << "Hello, I'm a Triangle";
+        };
     };
-};
 
 
-TEST_CASE("VirtualBase: Shape") {
-    VirtualBaseShape shape;
-    shape.printMe();
+    TEST_CASE("VirtualBase: Shape") {
+        Shape shape;
+        shape.printMe();
 
+    }
+
+    TEST_CASE("VirtualBase: Triangle") {
+        Triangle shape;
+        shape.printMe();
+
+    }
+
+    TEST_CASE("VirtualBase: value") {
+        Triangle triangle;
+        Shape shape = triangle;
+        shape.printMe();
+    }
+
+    TEST_CASE("VirtualBase: reference") {
+        Triangle triangle;
+        Shape &shape = triangle;
+        shape.printMe();
+    }
+
+    TEST_CASE("VirtualBase: pointer") {
+        Triangle triangle;
+        Shape *shape = &triangle;
+        shape->printMe();
+    }
 }
-
-TEST_CASE("VirtualBase: Triangle") {
-    VirtualBaseTriangle shape;
-    shape.printMe();
-
-}
-
-TEST_CASE("VirtualBase: value") {
-    VirtualBaseTriangle triangle;
-    VirtualBaseShape shape = triangle;
-    shape.printMe();
-}
-TEST_CASE("VirtualBase: reference") {
-    VirtualBaseTriangle triangle;
-    VirtualBaseShape& shape = triangle;
-    shape.printMe();
-}
-
-TEST_CASE("VirtualBase: pointer") {
-    VirtualBaseTriangle triangle;
-    VirtualBaseShape* shape = &triangle;
-    shape->printMe();
-}
-

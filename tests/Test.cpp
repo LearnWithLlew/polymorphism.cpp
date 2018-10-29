@@ -16,11 +16,11 @@
 //    };
 //};
 //
-//class BasicTriangle : public NormalShape {
+//class BasicTriangle : public Shape {
 //public:
 //    std::string name;
 //
-//    BasicTriangle() : NormalShape("BasicTriangle") {
+//    BasicTriangle() : Shape("BasicTriangle") {
 //
 //    }
 //
@@ -31,7 +31,7 @@
 //
 //
 //TEST_CASE("Say hello Shape") {
-//    NormalShape shape("Mr.ug");
+//    Shape shape("Mr.ug");
 //    shape.printMe();
 //
 //}
@@ -51,7 +51,7 @@
 //TEST_CASE("Say hello to slicing") {
 //    BasicTriangle triangle;
 //    triangle.name = "Isosceles";
-//    NormalShape shape = triangle;
+//    Shape shape = triangle;
 //    shape.printMe();
 //}
 //
@@ -65,7 +65,7 @@
 //    get_triangle().printMe();
 //}
 //
-//NormalShape get_shape() {
+//Shape get_shape() {
 //    BasicTriangle triangle;
 //    triangle.name = "bermuda";
 //    //((BasicShape)triangle).name = "golden";
@@ -76,22 +76,22 @@
 //}
 //
 //TEST_CASE("Say hello to named returns") {
-//    NormalShape s = get_shape();
+//    Shape s = get_shape();
 //    s.name = "love";
 //    s.printMe();
 //}
 //
-//NormalShape& get_shape_by_reference() {
+//Shape& get_shape_by_reference() {
 //    BasicTriangle triangle;
 //    triangle.name = "bermuda";
 //    return triangle;
 //}
 //TEST_CASE("Say hello to shape by reference") {
-//    NormalShape s = get_shape();
+//    Shape s = get_shape();
 //    s.printMe();
 //}
 //
-//void print_shape(NormalShape shape) {
+//void print_shape(Shape shape) {
 //    shape.printMe();
 //}
 //TEST_CASE("call method by value") {
@@ -100,7 +100,7 @@
 //    print_shape(triangle);
 //}
 //
-//void print_shape_reference(NormalShape& shape) {
+//void print_shape_reference(Shape& shape) {
 //    shape.printMe();
 //}
 //TEST_CASE("call method by reference") {
@@ -109,7 +109,7 @@
 //    print_shape_reference(triangle);
 //}
 //
-//void print_shape_const_reference( NormalShape& shape) {
+//void print_shape_const_reference( Shape& shape) {
 //    shape.printMe();
 //}
 //TEST_CASE("call method by const reference") {

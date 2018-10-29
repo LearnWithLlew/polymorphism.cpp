@@ -7,7 +7,7 @@
 //public:
 //    std::string name;
 //
-//    NormalShape(std::string name) : name(name) {
+//    Shape(std::string name) : name(name) {
 //
 //    }
 //
@@ -16,9 +16,9 @@
 //    };
 //};
 //
-//class BasicTriangle : public NormalShape {
+//class BasicTriangle : public Shape {
 //public:
-//    BasicTriangle(std::string name) : NormalShape(name) {
+//    BasicTriangle(std::string name) : Shape(name) {
 //
 //    }
 //
@@ -31,7 +31,7 @@
 //TEST_CASE("Say Hello to const method") {
 //    std::string name = "Obtuse";
 //    BasicTriangle triangle(name);
-//    NormalShape* shape = &triangle;
+//    Shape* shape = &triangle;
 //    shape->printMe();
 //
 //}
