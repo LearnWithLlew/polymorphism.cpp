@@ -22,7 +22,7 @@ namespace parameter_passing {
         };
     };
 
-    void print(Shape s){
+    void print(Shape s) {
         s.printMe();
     }
 
@@ -35,18 +35,22 @@ namespace parameter_passing {
         print(Triangle());
 
     }
-    void print_reference(Shape& s){
+
+    void print_reference(Shape &s) {
         s.printMe();
     }
 
     TEST_CASE("ParameterPassing: reference") {
         Triangle t;
-        print_reference(t);    }
+        print_reference(t);
+    }
 
-    void print_pointer(Shape* s){
+    void print_pointer(Shape *s) {
         s->printMe();
     }
+
     TEST_CASE("ParameterPassing: pointer") {
         Triangle t;
-        print_reference(t);   }
+        print_pointer(&t);
+    }
 }
