@@ -7,5 +7,9 @@ set(SOURCE_FILES
         VirturalBase.cpp
         VirturalConstBase.cpp
         ParameterPassing.cpp
+        ReturnValues.cpp
+        FunctionPointers.cpp
+        TypeDefs.cpp
+        FunctionPointersWithFields.cpp
         )
 add_executable(PolymorphismTest ${SOURCE_FILES} )
