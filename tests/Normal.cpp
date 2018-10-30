@@ -9,7 +9,7 @@ namespace normal {
     class Shape {
     public:
 
-        void printMe() const {
+        void printMe()  {
             std::cout << "Hello, I'm a shape";
         };
     };
@@ -17,7 +17,7 @@ namespace normal {
     class Triangle : public Shape {
     public:
 
-        void printMe() const {
+        void printMe()  {
             std::cout << "Hello, I'm a Triangle";
         };
     };

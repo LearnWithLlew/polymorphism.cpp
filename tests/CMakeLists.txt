@@ -6,5 +6,6 @@ set(SOURCE_FILES
         Normal.cpp
         VirturalBase.cpp
         VirturalConstBase.cpp
+        ParameterPassing.cpp
         )
 add_executable(PolymorphismTest ${SOURCE_FILES} )
